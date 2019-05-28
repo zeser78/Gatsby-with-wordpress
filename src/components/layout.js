@@ -24,7 +24,7 @@ const Layout = ({children}) => {
     }
     return (
         <>
-       <Hamburger />
+       <Hamburger  handleOverlayMenu={handleOverlayMenu}/>
        <OverlayMenu />
        <Header />
        <Primary id="primary" className="content-area">
@@ -38,7 +38,7 @@ const Layout = ({children}) => {
     )
 }
 
-Layout.prototype = {
+Layout.proptype = {
     children: PropTypes.node.isRequired
     
 
