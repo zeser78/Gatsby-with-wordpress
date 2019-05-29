@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const NavigationWrapper = styled.nav`
+// NavigationWrapper
+
+export const Overlay = styled.nav`
   margin: 5px 0 10px 0; /* just to give some spacing */
   color: #212121;
   text-transform: uppercase;

@@ -9,23 +9,25 @@ import Hamburger from './Hamburger';
 import Footer from './Footer';
 
 import './layout.css';
-// import 'bootstrap/dist/css/bootstrap-grid.css';
+import 'bootstrap/dist/css/bootstrap-grid.css';
 
 const Primary = styled.main`
-    padding: 110px 0 0 0 ;
+    padding: 110px 0 0 0;
 `
 const Layout = ({children}) => {
 
     const [ menuOpen, setMenuOpen] = useState(false);
 
     const handleOverlayMenu = () => {
-        setMenuOpen(!menuOpen)
+        setMenuOpen(!menuOpen);
 
-    }
+    };
+
     return (
         <>
+
        <Hamburger  handleOverlayMenu={handleOverlayMenu}/>
-       <OverlayMenu />
+       <OverlayMenu menuOpen={menuOpen} callback={handleOverlayMenu} />
        <Header />
        <Primary id="primary" className="content-area">
            <main id="main" className="site-main" role="main">
